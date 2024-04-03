@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link'; // Import Link from Next.js
-import styles from '../styles/styles.module.css'; // Import CSS styles
+import styles from './styles/styles.module.css'; // Import CSS styles
 
 const Leaderboard = () => {
     const [leaderboardData, setLeaderboardData] = useState([]);
