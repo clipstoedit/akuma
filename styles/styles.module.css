@@ -1,0 +1,202 @@
+.Container {
+    background-color: #333;
+}
+
+.Header {
+    background-color: #252525;
+}
+
+.leaderboardContainer {
+    padding: 2% 2%;
+    color: #fff;
+    /* Text color in dark mode */
+    background-color: #121212;
+    /* Background color in dark mode */
+}
+
+.leaderboardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.leaderboardTitle {
+    font-size: 1.75em;
+}
+
+.timeRangeDropdown select {
+    appearance: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #252525;
+    border-radius: 4px;
+    background-color: #121212;
+    cursor: pointer;
+    outline: none;
+}
+
+.timeRangeDropdown select:hover {
+    border-color: #999;
+}
+
+.timeRangeDropdown select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.sellerHeader {
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.leftSection {
+    display: flex;
+    align-items: center;
+}
+
+.goBackButton {
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.sellerTitle {
+    margin-left: 12px;
+    color: #fff;
+    font-size: 1.75em;
+}
+
+.leaderboardTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.itemImage {
+    height: 32px;
+    width: 32px;
+}
+
+.leaderboardTable th,
+.leaderboardTable td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.leaderboardTable th {
+    text-align: left;
+    border-bottom: 1px solid #252525;
+    /* Darker border color */
+    color: #fff;
+    /* Text color in dark mode */
+    cursor: pointer;
+}
+
+.leaderboardTable th:nth-child(1),
+.leaderboardTable td:nth-child(1) {
+    width: 12.5%;
+    /* Adjust the width as needed */
+}
+
+.leaderboardTable th:nth-child(2),
+.leaderboardTable td:nth-child(2) {
+    width: 12.5%;
+    /* Adjust the width as needed */
+}
+
+
+.leaderboardTable th:nth-child(3),
+.leaderboardTable td:nth-child(3) {
+    width: 0%;
+    /* Adjust the width as needed */
+}
+
+.leaderboardTable th:nth-child(4),
+.leaderboardTable td:nth-child(4) {
+    width: 30%;
+    /* Adjust the width as needed */
+}
+
+
+.leaderboardTable th:nth-child(5),
+.leaderboardTable td:nth-child(5) {
+    width: 0%;
+}
+
+.leaderboardTable th:nth-child(6),
+.leaderboardTable td:nth-child(6) {
+    width: 15%;
+}
+
+.leaderboardTable th:nth-child(7),
+.leaderboardTable td:nth-child(7) {
+    width: 12.5%;
+}
+
+.leaderboardTable th:nth-child(8),
+.leaderboardTable td:nth-child(8) {
+    text-align: center;
+    width: 0%;
+}
+
+.leaderboardTable th:nth-child(9),
+.leaderboardTable td:nth-child(9) {
+    width: 12.5%;
+}
+
+.leaderboardTable th:nth-child(10),
+.leaderboardTable td:nth-child(10) {
+    width: 1%;
+}
+
+.leaderboardTable tbody tr:nth-child(even) {
+    background-color: #171717;
+    /* Darker background color */
+}
+
+.leaderboardTable tbody tr:hover {
+    background-color: #252525;
+    /* Darker background color */
+}
+
+/* Add cursor pointer to clickable seller name */
+.leaderboardTable tbody td:first-child {
+    cursor: pointer;
+    text-transform: capitalize;
+    /* Capitalize the first letter of each word */
+}
+
+.normalQuality {
+    font-weight: 700;
+}
+
+.fineQuality {
+    color: #2cc50d;
+    font-weight: 700;
+}
+
+.superiorQuality {
+    color: #3991ff;
+    font-weight: 700;
+}
+
+.epicQuality {
+    color: #9f2df7;
+    font-weight: 700;
+}
+
+.legendaryQuality {
+    color: #eec929;
+    font-weight: 700;
+}
+
+.sortTriangle {
+    cursor: pointer;
+}
