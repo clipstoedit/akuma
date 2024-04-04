@@ -1,39 +1,118 @@
 import React, { useState, useEffect } from 'react';
-import weekData from '../public/data/week_seller_totals.json'; // Adjust the path accordingly
-import Link from 'next/link'; // Import Link from Next.js
+import { useRouter } from 'next/router';
+import weekData from '../public/data/week_seller_totals.json';
+import monthData from '../public/data/month_seller_totals.json';
+import days90Data from '../public/data/90days_seller_totals.json';
+import lifetimeData from '../public/data/lifetime_seller_totals.json';
 import styles from '../styles/styles.module.css'; // Import CSS styles
+import '@fortawesome/fontawesome-free/css/all.css'; // Import FontAwesome CSS
 
-const Leaderboard = () => {
-    const [leaderboardData, setLeaderboardData] = useState([]);
-    const [selectedSellerData, setSelectedSellerData] = useState(null);
+const SellerPage = () => {
+    const router = useRouter();
+    const { sellerName } = router.query;
+    const [sellerData, setSellerData] = useState([]);
+    const [sortBy, setSortBy] = useState('Transaction Time');
+    const [sortOrder, setSortOrder] = useState('desc');
     const [timeRangeOptions, setTimeRangeOptions] = useState([]); // Array to store time range options
     const [timeRange, setTimeRange] = useState('week'); // Default to week
 
-    useEffect(() => {
-        // Fetch available time range options from the imported JSON data
-        setTimeRangeOptions(weekData);
-    }, []);
+    const handleGoBack = () => {
+        router.back(); // This will navigate back to the previous page
+    };
 
-    useEffect(() => {
-        // Fetch leaderboard data from the imported JSON data based on the selected time range
-        setLeaderboardData(weekData); // Assuming weekData contains the leaderboard data
-    }, [timeRange]);
-
-     const handleClick = async (sellerName) => {
-        // Handle click to get seller data from the imported JSON data
-        const selectedSeller = sellerData.filter((seller) => seller.name === sellerName);
-        setSelectedSellerData(selectedSeller);
+    const getColorForQuality = (quality) => {
+        switch (quality) {
+            case 'Normal':
+                return styles.normalQuality; // Define CSS class for Normal quality
+            case 'Fine':
+                return styles.fineQuality; // Define CSS class for Fine quality
+            case 'Superior':
+                return styles.superiorQuality; // Define CSS class for Superior quality
+            case 'Epic':
+                return styles.epicQuality; // Define CSS class for Epic quality
+            case 'Legendary':
+                return styles.legendaryQuality; // Define CSS class for Legendary quality
+            default:
+                return ''; // Default class
+        }
     };
 
     const handleTimeRangeChange = (newTimeRange) => {
         setTimeRange(newTimeRange);
     };
 
+    useEffect(() => {
+        // Fetch available time range options from server
+        const fetchTimeRangeOptions = async () => {
+            try {
+                // Simulate fetching time range options by setting state directly from imported JSON files
+                setTimeRangeOptions([
+                    { label: 'Week', value: 'week' },
+                    { label: 'Month', value: 'month' },
+                    { label: '90 Days', value: '90days' },
+                    { label: 'Lifetime', value: 'lifetime' },
+                ]);
+            } catch (error) {
+                console.error('Error fetching time range options:', error);
+            }
+        };
+        fetchTimeRangeOptions(); // Fetch time range options when component mounts
+    }, []);
+
+    useEffect(() => {
+        // Fetch seller data based on selected time range
+        let data;
+        switch (timeRange) {
+            case 'week':
+                data = weekData;
+                break;
+            case 'month':
+                data = monthData;
+                break;
+            case '90days':
+                data = days90Data;
+                break;
+            case 'lifetime':
+                data = lifetimeData;
+                break;
+            default:
+                data = weekData; // Default to week data
+                break;
+        }
+        setSellerData(data);
+    }, [timeRange]);
+
+    const handleSort = (column) => {
+        // Toggle sorting order if sorting the same column
+        const newSortOrder = sortBy === column ? (sortOrder === 'asc' ? 'desc' : 'asc') : 'asc';
+        setSortBy(column);
+        setSortOrder(newSortOrder);
+    };
+
+    // Sort the data based on the selected column and sorting order
+    const sortedData = sellerData.sort((a, b) => {
+        const valA = a[sortBy];
+        const valB = b[sortBy];
+        if (sortBy === 'Item Price' || sortBy === 'Total Price') {
+            // Remove 'g' and commas, then parse as float for price sorting
+            const parsedValA = parseFloat(valA.replace(/[^\d.]/g, ''));
+            const parsedValB = parseFloat(valB.replace(/[^\d.]/g, ''));
+            return sortOrder === 'asc' ? parsedValA - parsedValB : parsedValB - parsedValA;
+        } else {
+            return sortOrder === 'asc' ? (valA < valB ? -1 : valA > valB ? 1 : 0) : valA > valB ? -1 : valA < valB ? 1 : 0;
+        }
+    });
+
     return (
         <div className={styles.Container}>
             <div className={styles.leaderboardContainer}>
-                <div className={styles.leaderboardHeader}>
-                    <h1 className={styles.leaderboardTitle}> Leaderboard </h1>
+                <div className={styles.sellerHeader}>
+                    <div className={styles.leftSection}>
+                        <a className={styles.goBackButton} onClick={handleGoBack}>
+                            <i className="fas fa-arrow-left"></i>
+                        </a>
+                        <h1 className={styles.sellerTitle}>{sellerName}'s Sales</h1>
+                    </div>
                     <div className={styles.timeRangeDropdown}>
                         <select value={timeRange} onChange={(e) => handleTimeRangeChange(e.target.value)}>
                             {timeRangeOptions.map((option, index) => (
@@ -48,38 +127,78 @@ const Leaderboard = () => {
                     <thead>
                         <tr>
                             <th>Seller</th>
-                            <th>Total Price</th>
-                            <th>Tax Collected</th>
+                            <th onClick={() => handleSort('Buyer')}>
+                                Buyer
+                                {sortBy === 'Buyer' && (
+                                    <span className={styles.sortTriangle}>{sortOrder === 'asc' ? '▲' : '▼'}</span>
+                                )}
+                            </th>
+                            <th>Item</th>
+                            <th onClick={() => handleSort('Item Name')}>
+                                Item Name
+                                {sortBy === 'Item Name' && (
+                                    <span className={styles.sortTriangle}>{sortOrder === 'asc' ? '▲' : '▼'}</span>
+                                )}
+                            </th>
+                            <th onClick={() => handleSort('Transaction Time')}>
+                                Transaction Time
+                                {sortBy === 'Transaction Time' && (
+                                    <span className={styles.sortTriangle}>{sortOrder === 'asc' ? '▲' : '▼'}</span>
+                                )}
+                            </th>
+                            <th>Type</th>
+                            <th onClick={() => handleSort('Item Price')}>
+                                Item Price
+                                {sortBy === 'Item Price' && (
+                                    <span className={styles.sortTriangle}>{sortOrder === 'asc' ? '▲' : '▼'}</span>
+                                )}
+                            </th>
+                            <th onClick={() => handleSort('Item Quantity')}>
+                                Quantity
+                                {sortBy === 'Item Quantity' && (
+                                    <span className={styles.sortTriangle}>{sortOrder === 'asc' ? '▲' : '▼'}</span>
+                                )}
+                            </th>
+                            <th onClick={() => handleSort('Total Price')}>
+                                Total Price
+                                {sortBy === 'Total Price' && (
+                                    <span className={styles.sortTriangle}>{sortOrder === 'asc' ? '▲' : '▼'}</span>
+                                )}
+                            </th>
+                            <th onClick={() => handleSort('Sales Tax')}>
+                                Tax Collected
+                                {sortBy === 'Sales Tax' && (
+                                    <span className={styles.sortTriangle}>{sortOrder === 'asc' ? '▲' : '▼'}</span>
+                                )}
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
-                        {leaderboardData.map((seller, index) => (
-                            <Link legacyBehavior key={index} href={`/seller/${seller.name}`}>
-                                <tr className={styles.row} onClick={() => handleClick(seller.name)}>
-                                    <td>{seller.name}</td>
-                                    <td>{seller.totalPrice}g</td>
-                                    <td>{seller.salesTax}g</td>
-                                </tr>
-                            </Link>
+                        {sortedData.map((sale, index) => (
+                            <tr key={index}>
+                                <td>{sale["Seller"]}</td>
+                                <td>{sale["Buyer"]}</td>
+                                <td>
+                                    <img
+                                        src={`/items/${sale["Item Number"]}.png`}
+                                        alt={sale["Item Number"]}
+                                        className={styles.itemImage}
+                                    />
+                                </td>
+                                <td className={getColorForQuality(sale["Quality"])}>{sale["Item Name"]}</td>
+                                <td>{sale["Transaction Time"]}</td>
+                                <td>{sale["Type"]}</td>
+                                <td>{sale["Item Price"]}</td>
+                                <td>{sale["Item Quantity"]}</td>
+                                <td>{sale["Total Price"]}</td>
+                                <td>{sale["Sales Tax"]}</td>
+                            </tr>
                         ))}
                     </tbody>
                 </table>
-
-                {selectedSellerData && (
-                    <div>
-                        <h2>{selectedSellerData[0].Seller}'s Sales</h2>
-                        <ul>
-                            {selectedSellerData.map((sale, index) => (
-                                <li key={index}>
-                                    {sale["Item Name"]} - {sale["Total Price"]}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                )}
             </div>
         </div>
     );
 };
 
-export default Leaderboard;
+export default SellerPage;
