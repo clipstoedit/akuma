@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import weekData from '../path/to/week.json'; // Adjust the path accordingly
+import weekData from '/api/week_seller_totals.json'; // Adjust the path accordingly
 import Link from 'next/link'; // Import Link from Next.js
 import styles from '../styles/styles.module.css'; // Import CSS styles
 
