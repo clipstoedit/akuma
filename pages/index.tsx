@@ -19,19 +19,6 @@ const Leaderboard = () => {
         setLeaderboardData(weekData); // Assuming weekData contains the leaderboard data
     }, [timeRange]);
 
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(`/api/leaderboard?timeRange=${timeRange}`);
-                setLeaderboardData(response.data);
-            } catch (error) {
-                console.error('Error fetching leaderboard data:', error);
-            }
-        };
-        fetchData();
-    }, [timeRange]);
-
      const handleClick = async (sellerName) => {
         // Handle click to get seller data from the imported JSON data
         const selectedSeller = sellerData.filter((seller) => seller.name === sellerName);
