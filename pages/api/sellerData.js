@@ -1,4 +1,4 @@
-import os;
+import os,
 
 const ROOT_PATH = os.environ['GITHUB_WORKSPACE'];
 import weekData from `${ROOT_PATH}public/data/week.json`;
