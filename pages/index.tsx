@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import weekData from '../path/to/week.json'; // Adjust the path accordingly
+import sellerData from '../path/to/sellerData.json';
 import Link from 'next/link'; // Import Link from Next.js
 import styles from '../styles/styles.module.css'; // Import CSS styles
 
@@ -10,18 +11,14 @@ const Leaderboard = () => {
     const [timeRange, setTimeRange] = useState('week'); // Default to week
 
     useEffect(() => {
-        // Fetch available time range options from server
-        const fetchTimeRangeOptions = async () => {
-            try {
-                const response = await axios.get('/api/timeRangeOptions');
-                console.log(response.data); // Log the response data to check its format
-                setTimeRangeOptions(response.data); // Set time range options state
-            } catch (error) {
-                console.error('Error fetching time range options:', error);
-            }
-        };
-        fetchTimeRangeOptions(); // Fetch time range options when component mounts
+        // Fetch available time range options from the imported JSON data
+        setTimeRangeOptions(weekData);
     }, []);
+
+    useEffect(() => {
+        // Fetch leaderboard data from the imported JSON data based on the selected time range
+        setLeaderboardData(weekData); // Assuming weekData contains the leaderboard data
+    }, [timeRange]);
 
 
     useEffect(() => {
@@ -36,13 +33,10 @@ const Leaderboard = () => {
         fetchData();
     }, [timeRange]);
 
-    const handleClick = async (sellerName) => {
-        try {
-            const response = await axios.get(`/api/sellerData?seller=${sellerName}&timeRange=${timeRange}`);
-            setSelectedSellerData(response.data);
-        } catch (error) {
-            console.error(`Error fetching data for ${sellerName}:`, error);
-        }
+     const handleClick = async (sellerName) => {
+        // Handle click to get seller data from the imported JSON data
+        const selectedSeller = sellerData.filter((seller) => seller.name === sellerName);
+        setSelectedSellerData(selectedSeller);
     };
 
     const handleTimeRangeChange = (newTimeRange) => {
