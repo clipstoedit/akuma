@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import weekData from '../path/to/week.json'; // Adjust the path accordingly
-import sellerData from '../path/to/sellerData.json';
 import Link from 'next/link'; // Import Link from Next.js
 import styles from '../styles/styles.module.css'; // Import CSS styles
 
