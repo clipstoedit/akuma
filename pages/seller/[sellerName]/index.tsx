@@ -45,8 +45,13 @@ const SellerPage = () => {
         // Fetch available time range options from server
         const fetchTimeRangeOptions = async () => {
             try {
-                const response = await axios.get('/api/timeRangeOptions');
-                setTimeRangeOptions(response.data); // Set time range options state
+                // Simulate fetching time range options by setting state directly from imported JSON files
+                setTimeRangeOptions([
+                    { label: 'Week', value: 'week' },
+                    { label: 'Month', value: 'month' },
+                    { label: '90 Days', value: '90days' },
+                    { label: 'Lifetime', value: 'lifetime' },
+                ]);
             } catch (error) {
                 console.error('Error fetching time range options:', error);
             }
@@ -55,18 +60,27 @@ const SellerPage = () => {
     }, []);
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(`/api/sellerData?seller=${sellerName}&timeRange=${timeRange}`);
-                setSellerData(response.data);
-            } catch (error) {
-                console.error(`Error fetching data for ${sellerName}:`, error);
-            }
-        };
-        if (sellerName) {
-            fetchData();
+        // Fetch seller data based on selected time range
+        let data;
+        switch (timeRange) {
+            case 'week':
+                data = weekData;
+                break;
+            case 'month':
+                data = monthData;
+                break;
+            case '90days':
+                data = days90Data;
+                break;
+            case 'lifetime':
+                data = lifetimeData;
+                break;
+            default:
+                data = weekData; // Default to week data
+                break;
         }
-    }, [sellerName, timeRange]);
+        setSellerData(data);
+    }, [timeRange]);
 
     const handleSort = (column) => {
         // Toggle sorting order if sorting the same column
