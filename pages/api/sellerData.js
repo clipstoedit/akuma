@@ -1,13 +1,10 @@
-const os = require('os');
+// pages/api/sellerData.js
 
-const ROOT_PATH = os.environ['GITHUB_WORKSPACE'];
-
-// Import data files using the root path obtained from the environment variable
-const weekData = require(`${ROOT_PATH}/public/data/week.json`);
-const monthData = require(`${ROOT_PATH}/public/data/month.json`);
-const days90Data = require(`${ROOT_PATH}/public/data/90days.json`);
-const lifetimeData = require(`${ROOT_PATH}/public/data/lifetime.json`);
-
+// Import data files
+import weekData from '../../public/data/week.json';
+import monthData from '../../public/data/month.json';
+import days90Data from '../../public/data/90days.json';
+import lifetimeData from '../../public/data/lifetime.json';
 
 export default function handler(req, res) {
     const { seller, timeRange } = req.query;
