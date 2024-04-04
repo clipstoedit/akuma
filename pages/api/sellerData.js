@@ -1,4 +1,4 @@
-import os,
+const os = require('os');
 
 const ROOT_PATH = os.environ['GITHUB_WORKSPACE'];
 
@@ -7,6 +7,7 @@ const weekData = require(`${ROOT_PATH}/public/data/week.json`);
 const monthData = require(`${ROOT_PATH}/public/data/month.json`);
 const days90Data = require(`${ROOT_PATH}/public/data/90days.json`);
 const lifetimeData = require(`${ROOT_PATH}/public/data/lifetime.json`);
+
 
 export default function handler(req, res) {
     const { seller, timeRange } = req.query;
