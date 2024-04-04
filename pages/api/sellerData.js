@@ -1,10 +1,12 @@
-// pages/api/sellerData.js
+import os;
 
-// Import data files
-import weekData from '../../public/data/week.json';
-import monthData from '../../public/data/month.json';
-import days90Data from '../../public/data/90days.json';
-import lifetimeData from '../../public/data/lifetime.json';
+const ROOT_PATH = os.environ['GITHUB_WORKSPACE'];
+import weekData from `${ROOT_PATH}public/data/week.json`;
+import monthData from `${ROOT_PATH}public/data/month.json`;
+import days90Data from `${ROOT_PATH}public/data/90days.json`;
+import lifetimeData from `${ROOT_PATH}public/data/lifetime.json`;
+
+
 
 export default function handler(req, res) {
     const { seller, timeRange } = req.query;
