@@ -1,7 +1,12 @@
-import weekData from '../../public/data/week_seller_totals.json';
-import monthData from '../../public/data/month_seller_totals.json';
-import days90Data from '../../public/data/90days_seller_totals.json';
-import lifetimeData from '../../public/data/lifetime_seller_totals.json';
+const os = require('os');
+
+const ROOT_PATH = os.environ['GITHUB_WORKSPACE'];
+
+// Import data files using the root path obtained from the environment variable
+const weekData = require(`${ROOT_PATH}/public/data/week_seller_totals.json`);
+const monthData = require(`${ROOT_PATH}/public/data/month_seller_totals.json`);
+const days90Data = require(`${ROOT_PATH}/public/data/90days_seller_totals.json`);
+const lifetimeData = require(`${ROOT_PATH}/public/data/lifetime_seller_totals.json`);
 
 export default function handler(req, res) {
     const { timeRange } = req.query;
