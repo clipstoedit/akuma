@@ -1,10 +1,10 @@
 // pages/api/sellerData.js
 
 // Import data files
-import weekData from '../../../public/data/week.json';
-import monthData from '../../../public/data/month.json';
-import days90Data from '../../../public/data/90days.json';
-import lifetimeData from '../../../public/data/lifetime.json';
+import weekData from '../../public/data/week.json';
+import monthData from '../../public/data/month.json';
+import days90Data from '../../public/data/90days.json';
+import lifetimeData from '../../public/data/lifetime.json';
 
 export default function handler(req, res) {
     const { seller, timeRange } = req.query;
