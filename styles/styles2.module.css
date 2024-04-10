@@ -105,21 +105,59 @@
 
 .leaderboardTable th:nth-child(1),
 .leaderboardTable td:nth-child(1) {
-    width: 30%;
+    width: 12.5%;
     /* Adjust the width as needed */
 }
 
 .leaderboardTable th:nth-child(2),
 .leaderboardTable td:nth-child(2) {
-    width: 35%;
+    width: 12.5%;
     /* Adjust the width as needed */
 }
 
 
 .leaderboardTable th:nth-child(3),
 .leaderboardTable td:nth-child(3) {
-    width: 35%;
+    width: 0%;
     /* Adjust the width as needed */
+}
+
+.leaderboardTable th:nth-child(4),
+.leaderboardTable td:nth-child(4) {
+    width: 30%;
+    /* Adjust the width as needed */
+}
+
+
+.leaderboardTable th:nth-child(5),
+.leaderboardTable td:nth-child(5) {
+    width: 0%;
+}
+
+.leaderboardTable th:nth-child(6),
+.leaderboardTable td:nth-child(6) {
+    width: 15%;
+}
+
+.leaderboardTable th:nth-child(7),
+.leaderboardTable td:nth-child(7) {
+    width: 12.5%;
+}
+
+.leaderboardTable th:nth-child(8),
+.leaderboardTable td:nth-child(8) {
+    text-align: center;
+    width: 0%;
+}
+
+.leaderboardTable th:nth-child(9),
+.leaderboardTable td:nth-child(9) {
+    width: 12.5%;
+}
+
+.leaderboardTable th:nth-child(10),
+.leaderboardTable td:nth-child(10) {
+    width: 1%;
 }
 
 .leaderboardTable tbody tr:nth-child(even) {
