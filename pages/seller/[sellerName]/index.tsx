@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import weekData from '../../../public/data/akuma/week_seller_totals.json';
-import monthData from '../../../public/data/akuma/month_seller_totals.json';
-import days90Data from '../../../public/data/akuma/90days_seller_totals.json';
-import lifetimeData from '../../../public/data/akuma/lifetime_seller_totals.json';
-import styles from '../../../styles/styles.module.css'; // Import CSS styles
+import axios from 'axios';
+import styles from '../../../styles/styles2.module.css'; // Import CSS styles
 import '@fortawesome/fontawesome-free/css/all.css'; // Import FontAwesome CSS
 
 const SellerPage = () => {
@@ -45,13 +42,8 @@ const SellerPage = () => {
         // Fetch available time range options from server
         const fetchTimeRangeOptions = async () => {
             try {
-                // Simulate fetching time range options by setting state directly from imported JSON files
-                setTimeRangeOptions([
-                    { label: 'Week', value: 'week' },
-                    { label: 'Month', value: 'month' },
-                    { label: '90 Days', value: '90days' },
-                    { label: 'Lifetime', value: 'lifetime' },
-                ]);
+                const response = await axios.get('/api/timeRangeOptions');
+                setTimeRangeOptions(response.data); // Set time range options state
             } catch (error) {
                 console.error('Error fetching time range options:', error);
             }
@@ -60,27 +52,18 @@ const SellerPage = () => {
     }, []);
 
     useEffect(() => {
-        // Fetch seller data based on selected time range
-        let data;
-        switch (timeRange) {
-            case 'week':
-                data = weekData;
-                break;
-            case 'month':
-                data = monthData;
-                break;
-            case '90days':
-                data = days90Data;
-                break;
-            case 'lifetime':
-                data = lifetimeData;
-                break;
-            default:
-                data = weekData; // Default to week data
-                break;
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(`/api/sellerData?seller=${sellerName}&timeRange=${timeRange}`);
+                setSellerData(response.data);
+            } catch (error) {
+                console.error(`Error fetching data for ${sellerName}:`, error);
+            }
+        };
+        if (sellerName) {
+            fetchData();
         }
-        setSellerData(data);
-    }, [timeRange]);
+    }, [sellerName, timeRange]);
 
     const handleSort = (column) => {
         // Toggle sorting order if sorting the same column
