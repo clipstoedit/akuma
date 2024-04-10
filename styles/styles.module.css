@@ -25,6 +25,10 @@
     font-size: 1.75em;
 }
 
+.clickableText {
+    cursor: pointer;
+}
+
 .timeRangeDropdown select {
     appearance: none;
     padding: 8px 12px;
