@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import Link from 'next/link';
 import styles from '../styles/styles.module.css';
 
@@ -23,8 +22,13 @@ const Leaderboard = () => {
     useEffect(() => {
         const fetchTimeRangeOptions = async () => {
             try {
-                const response = await axios.get('/api/timeRangeOptions');
-                setTimeRangeOptions(response.data);
+                // Simulate fetching time range options
+                setTimeRangeOptions([
+                    { value: 'week', label: 'Week' },
+                    { value: 'month', label: 'Month' },
+                    { value: '90days', label: '90 Days' },
+                    { value: 'lifetime', label: 'Lifetime' }
+                ]);
             } catch (error) {
                 console.error('Error fetching time range options:', error);
             }
@@ -78,21 +82,18 @@ const Leaderboard = () => {
         setLeaderboardData(data);
     };
 
-    const handleClick = async (sellerName) => {
-        try {
-            const response = await axios.get(`/api/sellerData?seller=${sellerName}&timeRange=${timeRange}`);
-            setSelectedSellerData(response.data);
-        } catch (error) {
-            console.error(`Error fetching data for ${sellerName}:`, error);
-        }
-    };
-
     const handleTimeRangeChange = (newTimeRange) => {
         setTimeRange(newTimeRange);
     };
 
     const handleToggleDataSource = () => {
         setUseAkuma2(!useAkuma2);
+    };
+
+    const handleClick = (sellerName) => {
+        // Simulate fetching selected seller data
+        const selectedData = leaderboardData.find(seller => seller.name === sellerName);
+        setSelectedSellerData(selectedData ? selectedData.sales : null);
     };
 
     return (
@@ -102,7 +103,7 @@ const Leaderboard = () => {
                     <div className={styles.buttonGroup}>
                         <div className={styles.buttonContainer} onClick={handleToggleDataSource}>
                             <span className={styles.clickableText}>
-                                {useAkuma2 ? 'Akuma 1 Data' : 'Akuma 2 Data'}
+                                {useAkuma2 ? 'Akuma 2 Data' : 'Akuma 1 Data'}
                             </span>
                         </div>
                     </div>
