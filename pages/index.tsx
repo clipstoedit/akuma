@@ -100,10 +100,10 @@ const Leaderboard = () => {
             <div className={styles.leaderboardContainer}>
                 <div className={styles.leaderboardHeader}>
                     <div className={styles.buttonGroup}>
-                        <div className={styles.buttonContainer}>
-                            <button onClick={handleToggleDataSource}>
-                                {useAkuma2 ? 'Akuma 2' : 'Akuma'}
-                            </button>
+                        <div className={styles.buttonContainer} onClick={handleToggleDataSource}>
+                            <span className={styles.clickableText}>
+                                {useAkuma2 ? 'Akuma 1 Data' : 'Akuma 2 Data'}
+                            </span>
                         </div>
                     </div>
                     <h1 className={styles.leaderboardTitle}> Leaderboard </h1>
@@ -151,7 +151,7 @@ const Leaderboard = () => {
                     </div>
                 )}
             </div>
-        </div>
+        </div >
     );
 };
 
