@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import weekData from '../../../public/data/week_seller_totals.json';
-import monthData from '../../../public/data/month_seller_totals.json';
-import days90Data from '../../../public/data/90days_seller_totals.json';
-import lifetimeData from '../../../public/data/lifetime_seller_totals.json';
+import weekData from '../../../public/data/akuma/week_seller_totals.json';
+import monthData from '../../../public/data/akuma/month_seller_totals.json';
+import days90Data from '../../../public/data/akuma/90days_seller_totals.json';
+import lifetimeData from '../../../public/data/akuma/lifetime_seller_totals.json';
 import styles from '../../../styles/styles.module.css'; // Import CSS styles
 import '@fortawesome/fontawesome-free/css/all.css'; // Import FontAwesome CSS
 
