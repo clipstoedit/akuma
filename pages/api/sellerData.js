@@ -1,32 +1,57 @@
-// pages/api/sellerData.js
-
 // Import data files
-import weekData from '../../public/data/week.json';
-import monthData from '../../public/data/month.json';
-import days90Data from '../../public/data/90days.json';
-import lifetimeData from '../../public/data/lifetime.json';
+import weekData from '../../public/data/akuma/week.json';
+import monthData from '../../public/data/akuma/month.json';
+import days90Data from '../../public/data/akuma/90days.json';
+import lifetimeData from '../../public/data/akuma/lifetime.json';
+
+import weekData2 from '../../public/data/akuma2/week.json';
+import monthData2 from '../../public/data/akuma2/month.json';
+import days90Data2 from '../../public/data/akuma2/90days.json';
+import lifetimeData2 from '../../public/data/akuma2/lifetime.json';
 
 export default function handler(req, res) {
-    const { seller, timeRange } = req.query;
+    const { seller, timeRange, useApi } = req.query; // Add useApi query parameter
 
-    // Determine which JSON file to respond with based on the timeRange parameter
     let data;
-    switch (timeRange) {
-        case 'week':
-            data = weekData;
-            break;
-        case 'month':
-            data = monthData;
-            break;
-        case '90days':
-            data = days90Data;
-            break;
-        case 'lifetime':
-            data = lifetimeData;
-            break;
-        default:
-            data = weekData; // Default to week data
-            break;
+
+    if (useApi === '2') {
+        // Use akuma2 data directory
+        switch (timeRange) {
+            case 'week':
+                data = weekData2;
+                break;
+            case 'month':
+                data = monthData2;
+                break;
+            case '90days':
+                data = days90Data2;
+                break;
+            case 'lifetime':
+                data = lifetimeData2;
+                break;
+            default:
+                data = weekData2; // Default to week data
+                break;
+        }
+    } else {
+        // Use akuma data directory
+        switch (timeRange) {
+            case 'week':
+                data = weekData;
+                break;
+            case 'month':
+                data = monthData;
+                break;
+            case '90days':
+                data = days90Data;
+                break;
+            case 'lifetime':
+                data = lifetimeData;
+                break;
+            default:
+                data = weekData; // Default to week data
+                break;
+        }
     }
 
     // Filter the data based on the seller's name
