@@ -5,34 +5,14 @@
         "salesTax": "138,970"
     },
     {
-        "name": "@Amrita_Soul",
-        "totalPrice": "3,309,099",
-        "salesTax": "115,839"
-    },
-    {
-        "name": "@AstLuminos",
-        "totalPrice": "3,214,000",
-        "salesTax": "112,490"
-    },
-    {
         "name": "@NoxPotens",
         "totalPrice": "3,194,000",
         "salesTax": "111,791"
     },
     {
-        "name": "@RattdeRodent",
-        "totalPrice": "2,203,200",
-        "salesTax": "77,114"
-    },
-    {
         "name": "@Joniovski",
         "totalPrice": "2,055,419",
         "salesTax": "71,939"
-    },
-    {
-        "name": "@Nethercall",
-        "totalPrice": "1,812,000",
-        "salesTax": "63,420"
     },
     {
         "name": "@BlueConcrete",
@@ -45,16 +25,6 @@
         "salesTax": "56,540"
     },
     {
-        "name": "@vctim",
-        "totalPrice": "1,477,202",
-        "salesTax": "51,712"
-    },
-    {
-        "name": "@FNX2000",
-        "totalPrice": "1,354,700",
-        "salesTax": "47,416"
-    },
-    {
         "name": "@ShapesShapesShapes",
         "totalPrice": "1,200,000",
         "salesTax": "42,000"
@@ -65,64 +35,14 @@
         "salesTax": "42,000"
     },
     {
-        "name": "@Platinu",
-        "totalPrice": "1,035,014",
-        "salesTax": "36,223"
-    },
-    {
         "name": "@Socialistkiwi",
         "totalPrice": "1,009,585",
         "salesTax": "35,336"
     },
     {
-        "name": "@Msqdjohnsoda",
-        "totalPrice": "779,000",
-        "salesTax": "27,265"
-    },
-    {
-        "name": "@Error_72890",
-        "totalPrice": "739,600",
-        "salesTax": "25,887"
-    },
-    {
-        "name": "@Voror_Fylgja",
-        "totalPrice": "703,445",
-        "salesTax": "24,622"
-    },
-    {
-        "name": "@Arkangel82",
-        "totalPrice": "665,000",
-        "salesTax": "23,275"
-    },
-    {
-        "name": "@LilNas-X",
-        "totalPrice": "645,500",
-        "salesTax": "22,593"
-    },
-    {
-        "name": "@ShadowStrikerr",
-        "totalPrice": "576,000",
-        "salesTax": "20,160"
-    },
-    {
-        "name": "@Akumu117",
-        "totalPrice": "572,500",
-        "salesTax": "20,038"
-    },
-    {
-        "name": "@violet868",
-        "totalPrice": "468,000",
-        "salesTax": "16,380"
-    },
-    {
-        "name": "@HypertonicMonk",
-        "totalPrice": "465,200",
-        "salesTax": "16,282"
-    },
-    {
-        "name": "@Naybeon_Fangcutter",
-        "totalPrice": "357,497",
-        "salesTax": "12,515"
+        "name": "@vctim",
+        "totalPrice": "813,402",
+        "salesTax": "28,471"
     },
     {
         "name": "@xaesha",
@@ -135,34 +55,9 @@
         "salesTax": "10,325"
     },
     {
-        "name": "@Sinnaria",
-        "totalPrice": "290,443",
-        "salesTax": "10,166"
-    },
-    {
-        "name": "@bbbmm08",
-        "totalPrice": "260,616",
-        "salesTax": "9,122"
-    },
-    {
-        "name": "@SavageHoax",
-        "totalPrice": "231,200",
-        "salesTax": "8,092"
-    },
-    {
         "name": "@Piraja27",
         "totalPrice": "222,142",
         "salesTax": "7,772"
-    },
-    {
-        "name": "@Ikeaa",
-        "totalPrice": "200,000",
-        "salesTax": "7,000"
-    },
-    {
-        "name": "@blazblue14589",
-        "totalPrice": "185,000",
-        "salesTax": "6,475"
     },
     {
         "name": "@onerich66",
@@ -170,89 +65,14 @@
         "salesTax": "6,416"
     },
     {
-        "name": "@Veriphas",
-        "totalPrice": "177,700",
-        "salesTax": "6,221"
-    },
-    {
-        "name": "@MissMily",
-        "totalPrice": "172,000",
-        "salesTax": "6,020"
-    },
-    {
-        "name": "@ChargeYourWeapons",
-        "totalPrice": "169,052",
-        "salesTax": "5,920"
-    },
-    {
-        "name": "@vMatrix",
-        "totalPrice": "168,260",
-        "salesTax": "5,888"
-    },
-    {
         "name": "@StR8-Greedy",
         "totalPrice": "164,000",
         "salesTax": "5,740"
     },
     {
-        "name": "@DyedHaire",
-        "totalPrice": "159,900",
-        "salesTax": "5,598"
-    },
-    {
-        "name": "@Killiansman",
-        "totalPrice": "150,723",
-        "salesTax": "5,262"
-    },
-    {
-        "name": "@zynemorg",
-        "totalPrice": "148,863",
-        "salesTax": "5,212"
-    },
-    {
-        "name": "@Burbala",
-        "totalPrice": "141,250",
-        "salesTax": "4,952"
-    },
-    {
-        "name": "@eat2much",
-        "totalPrice": "141,000",
-        "salesTax": "4,935"
-    },
-    {
-        "name": "@XEON62",
-        "totalPrice": "140,500",
-        "salesTax": "4,918"
-    },
-    {
-        "name": "@FaintyFox",
-        "totalPrice": "128,500",
-        "salesTax": "4,498"
-    },
-    {
-        "name": "@Dodoco_ONE",
-        "totalPrice": "126,666",
-        "salesTax": "4,433"
-    },
-    {
-        "name": "@Datsa",
-        "totalPrice": "123,500",
-        "salesTax": "4,324"
-    },
-    {
-        "name": "@gyuuu",
-        "totalPrice": "110,000",
-        "salesTax": "3,850"
-    },
-    {
-        "name": "@lavenderstar86",
-        "totalPrice": "107,390",
-        "salesTax": "3,759"
-    },
-    {
-        "name": "@nes320",
-        "totalPrice": "104,000",
-        "salesTax": "3,640"
+        "name": "@vMatrix",
+        "totalPrice": "142,960",
+        "salesTax": "5,003"
     },
     {
         "name": "@NeaNights",
@@ -260,34 +80,14 @@
         "salesTax": "3,500"
     },
     {
-        "name": "@corwindamber",
-        "totalPrice": "90,900",
-        "salesTax": "3,181"
-    },
-    {
-        "name": "@ChaoslordVed",
-        "totalPrice": "80,000",
-        "salesTax": "2,800"
-    },
-    {
-        "name": "@FishHedMan",
-        "totalPrice": "79,000",
-        "salesTax": "2,766"
+        "name": "@Ghost_1924",
+        "totalPrice": "81,798",
+        "salesTax": "2,862"
     },
     {
         "name": "@Haddington",
         "totalPrice": "78,250",
         "salesTax": "2,739"
-    },
-    {
-        "name": "@SphinxReverie",
-        "totalPrice": "74,779",
-        "salesTax": "2,618"
-    },
-    {
-        "name": "@Diabeardus",
-        "totalPrice": "74,562",
-        "salesTax": "2,610"
     },
     {
         "name": "@Blankknight",
@@ -300,39 +100,9 @@
         "salesTax": "2,389"
     },
     {
-        "name": "@Cheesed_GB",
-        "totalPrice": "64,700",
-        "salesTax": "2,265"
-    },
-    {
-        "name": "@TruthAndLies",
-        "totalPrice": "60,590",
-        "salesTax": "2,126"
-    },
-    {
-        "name": "@moopec",
-        "totalPrice": "57,200",
-        "salesTax": "2,002"
-    },
-    {
-        "name": "@DemonicdeathXXX",
-        "totalPrice": "54,731",
-        "salesTax": "1,920"
-    },
-    {
-        "name": "@Longshot81",
-        "totalPrice": "53,650",
-        "salesTax": "1,878"
-    },
-    {
         "name": "@ClesiusofNox",
         "totalPrice": "53,499",
         "salesTax": "1,872"
-    },
-    {
-        "name": "@Streetgang-PBR",
-        "totalPrice": "52,950",
-        "salesTax": "1,854"
     },
     {
         "name": "@Arkali",
@@ -345,44 +115,14 @@
         "salesTax": "1,620"
     },
     {
-        "name": "@Ghost_1924",
-        "totalPrice": "45,798",
-        "salesTax": "1,602"
-    },
-    {
         "name": "@Malikaie",
         "totalPrice": "45,615",
         "salesTax": "1,596"
     },
     {
-        "name": "@kepiploro",
-        "totalPrice": "42,000",
-        "salesTax": "1,470"
-    },
-    {
-        "name": "@Miserables82",
-        "totalPrice": "41,500",
-        "salesTax": "1,458"
-    },
-    {
-        "name": "@Michelinas",
-        "totalPrice": "41,482",
-        "salesTax": "1,452"
-    },
-    {
-        "name": "@Grave187",
-        "totalPrice": "41,300",
-        "salesTax": "1,447"
-    },
-    {
-        "name": "@GWDodd",
-        "totalPrice": "39,988",
-        "salesTax": "1,400"
-    },
-    {
-        "name": "@Jellydem",
-        "totalPrice": "39,400",
-        "salesTax": "1,380"
+        "name": "@Cheesed_GB",
+        "totalPrice": "37,700",
+        "salesTax": "1,320"
     },
     {
         "name": "@OPmonkey",
@@ -390,54 +130,9 @@
         "salesTax": "1,260"
     },
     {
-        "name": "@Ploppa",
-        "totalPrice": "35,488",
-        "salesTax": "1,241"
-    },
-    {
-        "name": "@homeskrilluh",
-        "totalPrice": "35,000",
-        "salesTax": "1,225"
-    },
-    {
-        "name": "@Oblivdrian",
-        "totalPrice": "35,000",
-        "salesTax": "1,225"
-    },
-    {
-        "name": "@Chakaala",
-        "totalPrice": "32,200",
-        "salesTax": "1,127"
-    },
-    {
         "name": "@kRAYZYon3",
         "totalPrice": "31,928",
         "salesTax": "1,117"
-    },
-    {
-        "name": "@Antaid",
-        "totalPrice": "27,000",
-        "salesTax": "945"
-    },
-    {
-        "name": "@Tier1Force",
-        "totalPrice": "26,512",
-        "salesTax": "929"
-    },
-    {
-        "name": "@Feiticeiroo",
-        "totalPrice": "25,998",
-        "salesTax": "910"
-    },
-    {
-        "name": "@khanmorte",
-        "totalPrice": "25,325",
-        "salesTax": "886"
-    },
-    {
-        "name": "@Guylords",
-        "totalPrice": "25,000",
-        "salesTax": "875"
     },
     {
         "name": "@aless_iamsono",
@@ -445,34 +140,9 @@
         "salesTax": "849"
     },
     {
-        "name": "@vereesh",
-        "totalPrice": "22,500",
-        "salesTax": "788"
-    },
-    {
         "name": "@SupernovaWriter",
         "totalPrice": "21,531",
         "salesTax": "754"
-    },
-    {
-        "name": "@ZeLezin",
-        "totalPrice": "21,000",
-        "salesTax": "735"
-    },
-    {
-        "name": "@RJBrownCA",
-        "totalPrice": "21,000",
-        "salesTax": "735"
-    },
-    {
-        "name": "@Zamaruk",
-        "totalPrice": "20,000",
-        "salesTax": "700"
-    },
-    {
-        "name": "@WombieJo",
-        "totalPrice": "19,976",
-        "salesTax": "699"
     },
     {
         "name": "@Big_Kahuna420",
@@ -480,99 +150,14 @@
         "salesTax": "697"
     },
     {
-        "name": "@citharal",
-        "totalPrice": "19,100",
-        "salesTax": "671"
-    },
-    {
-        "name": "@ElQueue",
-        "totalPrice": "18,732",
-        "salesTax": "655"
-    },
-    {
-        "name": "@zoya_lbc",
-        "totalPrice": "18,381",
-        "salesTax": "644"
-    },
-    {
-        "name": "@jornsnow1975",
-        "totalPrice": "17,400",
-        "salesTax": "609"
-    },
-    {
         "name": "@Upsidedownways",
         "totalPrice": "16,300",
         "salesTax": "571"
     },
     {
-        "name": "@Hellraisin1",
-        "totalPrice": "16,300",
-        "salesTax": "572"
-    },
-    {
         "name": "@illioslargaress",
         "totalPrice": "16,035",
         "salesTax": "565"
-    },
-    {
-        "name": "@Relic-Bearer",
-        "totalPrice": "15,500",
-        "salesTax": "542"
-    },
-    {
-        "name": "@mairim2810",
-        "totalPrice": "15,300",
-        "salesTax": "538"
-    },
-    {
-        "name": "@ZiggyZigAh",
-        "totalPrice": "15,000",
-        "salesTax": "525"
-    },
-    {
-        "name": "@BlindLittleMole",
-        "totalPrice": "15,000",
-        "salesTax": "525"
-    },
-    {
-        "name": "@Jann231",
-        "totalPrice": "14,342",
-        "salesTax": "502"
-    },
-    {
-        "name": "@SneakyMitchell",
-        "totalPrice": "13,900",
-        "salesTax": "487"
-    },
-    {
-        "name": "@jescountry",
-        "totalPrice": "13,550",
-        "salesTax": "475"
-    },
-    {
-        "name": "@Mysteria295",
-        "totalPrice": "13,240",
-        "salesTax": "463"
-    },
-    {
-        "name": "@Bleztor",
-        "totalPrice": "13,100",
-        "salesTax": "461"
-    },
-    {
-        "name": "@baneheart",
-        "totalPrice": "12,575",
-        "salesTax": "439"
-    },
-    {
-        "name": "@PeachCupCakes",
-        "totalPrice": "12,500",
-        "salesTax": "440"
-    },
-    {
-        "name": "@Orishan",
-        "totalPrice": "12,000",
-        "salesTax": "420"
     },
     {
         "name": "@anggahyde",
@@ -585,39 +170,14 @@
         "salesTax": "350"
     },
     {
-        "name": "@BizzMac",
-        "totalPrice": "10,000",
-        "salesTax": "350"
-    },
-    {
         "name": "@nferr15",
         "totalPrice": "9,900",
         "salesTax": "347"
     },
     {
-        "name": "@Satar1",
-        "totalPrice": "9,500",
-        "salesTax": "333"
-    },
-    {
-        "name": "@Axewound97",
-        "totalPrice": "9,060",
-        "salesTax": "317"
-    },
-    {
-        "name": "@P0s3id0n78",
-        "totalPrice": "9,039",
-        "salesTax": "316"
-    },
-    {
-        "name": "@Robotsarealive",
-        "totalPrice": "9,000",
-        "salesTax": "316"
-    },
-    {
-        "name": "@MasterW3",
-        "totalPrice": "8,000",
-        "salesTax": "280"
+        "name": "@o0solitude0o",
+        "totalPrice": "9,703",
+        "salesTax": "340"
     },
     {
         "name": "@Drafo7",
@@ -625,89 +185,9 @@
         "salesTax": "270"
     },
     {
-        "name": "@Argorious",
-        "totalPrice": "7,437",
-        "salesTax": "262"
-    },
-    {
         "name": "@Noodle333",
         "totalPrice": "7,430",
         "salesTax": "262"
-    },
-    {
-        "name": "@Mega_Squishanator",
-        "totalPrice": "7,000",
-        "salesTax": "245"
-    },
-    {
-        "name": "@Sorschae",
-        "totalPrice": "6,870",
-        "salesTax": "244"
-    },
-    {
-        "name": "@juiceboxheroes",
-        "totalPrice": "6,850",
-        "salesTax": "251"
-    },
-    {
-        "name": "@GorraShatan",
-        "totalPrice": "6,200",
-        "salesTax": "217"
-    },
-    {
-        "name": "@pumbz",
-        "totalPrice": "6,180",
-        "salesTax": "217"
-    },
-    {
-        "name": "@Bieg",
-        "totalPrice": "6,000",
-        "salesTax": "210"
-    },
-    {
-        "name": "@pewterskier",
-        "totalPrice": "6,000",
-        "salesTax": "210"
-    },
-    {
-        "name": "@DukeJacobus45",
-        "totalPrice": "6,000",
-        "salesTax": "210"
-    },
-    {
-        "name": "@StormWarrior_7",
-        "totalPrice": "6,000",
-        "salesTax": "210"
-    },
-    {
-        "name": "@Kaifinch",
-        "totalPrice": "5,560",
-        "salesTax": "193"
-    },
-    {
-        "name": "@Kooish",
-        "totalPrice": "5,500",
-        "salesTax": "194"
-    },
-    {
-        "name": "@Kenjay57",
-        "totalPrice": "5,364",
-        "salesTax": "187"
-    },
-    {
-        "name": "@NorskyBabe_509",
-        "totalPrice": "5,139",
-        "salesTax": "178"
-    },
-    {
-        "name": "@cyoadventure",
-        "totalPrice": "5,000",
-        "salesTax": "175"
-    },
-    {
-        "name": "@Diamondchinchin",
-        "totalPrice": "4,770",
-        "salesTax": "168"
     },
     {
         "name": "@EdolasSin",
@@ -715,159 +195,9 @@
         "salesTax": "158"
     },
     {
-        "name": "@KillerClembo",
-        "totalPrice": "4,450",
-        "salesTax": "157"
-    },
-    {
-        "name": "@MouthForWar79",
-        "totalPrice": "4,443",
-        "salesTax": "156"
-    },
-    {
-        "name": "@GrabbersDivinity",
-        "totalPrice": "4,200",
-        "salesTax": "147"
-    },
-    {
-        "name": "@rock1064",
-        "totalPrice": "3,622",
-        "salesTax": "130"
-    },
-    {
         "name": "@Krovavyy-Sanguine",
         "totalPrice": "3,500",
         "salesTax": "123"
-    },
-    {
-        "name": "@JustVinceThings",
-        "totalPrice": "3,500",
-        "salesTax": "123"
-    },
-    {
-        "name": "@teeje",
-        "totalPrice": "3,390",
-        "salesTax": "118"
-    },
-    {
-        "name": "@KarnficinA",
-        "totalPrice": "3,347",
-        "salesTax": "117"
-    },
-    {
-        "name": "@Boozly",
-        "totalPrice": "3,000",
-        "salesTax": "105"
-    },
-    {
-        "name": "@TheRealCrazyCarmela",
-        "totalPrice": "2,671",
-        "salesTax": "93"
-    },
-    {
-        "name": "@JustKaipalm",
-        "totalPrice": "2,400",
-        "salesTax": "84"
-    },
-    {
-        "name": "@Ozzy29",
-        "totalPrice": "2,275",
-        "salesTax": "81"
-    },
-    {
-        "name": "@adghar",
-        "totalPrice": "2,222",
-        "salesTax": "78"
-    },
-    {
-        "name": "@Tails888",
-        "totalPrice": "2,200",
-        "salesTax": "77"
-    },
-    {
-        "name": "@Galopulus",
-        "totalPrice": "2,150",
-        "salesTax": "75"
-    },
-    {
-        "name": "@treasure-map",
-        "totalPrice": "2,141",
-        "salesTax": "73"
-    },
-    {
-        "name": "@Remsen",
-        "totalPrice": "2,075",
-        "salesTax": "72"
-    },
-    {
-        "name": "@Hartmannn",
-        "totalPrice": "2,024",
-        "salesTax": "71"
-    },
-    {
-        "name": "@Davepig",
-        "totalPrice": "2,000",
-        "salesTax": "71"
-    },
-    {
-        "name": "@NinjaDimes",
-        "totalPrice": "2,000",
-        "salesTax": "70"
-    },
-    {
-        "name": "@Scarrebend",
-        "totalPrice": "1,600",
-        "salesTax": "56"
-    },
-    {
-        "name": "@Jupiter2384",
-        "totalPrice": "1,500",
-        "salesTax": "53"
-    },
-    {
-        "name": "@albai06",
-        "totalPrice": "1,500",
-        "salesTax": "53"
-    },
-    {
-        "name": "@Hoppeen",
-        "totalPrice": "1,500",
-        "salesTax": "53"
-    },
-    {
-        "name": "@NiNoKuni",
-        "totalPrice": "1,240",
-        "salesTax": "43"
-    },
-    {
-        "name": "@IsharaMeradin-Epic",
-        "totalPrice": "1,216",
-        "salesTax": "45"
-    },
-    {
-        "name": "@zoa1108",
-        "totalPrice": "1,186",
-        "salesTax": "42"
-    },
-    {
-        "name": "@SirendevelBradayaly",
-        "totalPrice": "1,075",
-        "salesTax": "38"
-    },
-    {
-        "name": "@SparrowX9",
-        "totalPrice": "1,050",
-        "salesTax": "37"
-    },
-    {
-        "name": "@dewmanchu87",
-        "totalPrice": "999",
-        "salesTax": "35"
-    },
-    {
-        "name": "@GoodMorning_Harper",
-        "totalPrice": "900",
-        "salesTax": "33"
     },
     {
         "name": "@MikeDaris",
@@ -875,34 +205,9 @@
         "salesTax": "31"
     },
     {
-        "name": "@Kedlar",
-        "totalPrice": "700",
-        "salesTax": "25"
-    },
-    {
         "name": "@G-TRAIN247",
         "totalPrice": "400",
         "salesTax": "14"
-    },
-    {
-        "name": "@Ashraya.V",
-        "totalPrice": "296",
-        "salesTax": "10"
-    },
-    {
-        "name": "@ArchKain123",
-        "totalPrice": "240",
-        "salesTax": "6"
-    },
-    {
-        "name": "@HawtChet",
-        "totalPrice": "240",
-        "salesTax": "9"
-    },
-    {
-        "name": "@Bennymac13",
-        "totalPrice": "200",
-        "salesTax": "7"
     },
     {
         "name": "@WeeBilly_BigChin",
@@ -913,35 +218,5 @@
         "name": "@skaterbj99",
         "totalPrice": "100",
         "salesTax": "4"
-    },
-    {
-        "name": "@tabicatastrophe",
-        "totalPrice": "100",
-        "salesTax": "4"
-    },
-    {
-        "name": "@GenWitch-2000",
-        "totalPrice": "40",
-        "salesTax": "2"
-    },
-    {
-        "name": "@mossutahraptor",
-        "totalPrice": "30",
-        "salesTax": "1"
-    },
-    {
-        "name": "@HATE3K",
-        "totalPrice": "27",
-        "salesTax": "1"
-    },
-    {
-        "name": "@WillieWest",
-        "totalPrice": "20",
-        "salesTax": "1"
-    },
-    {
-        "name": "@M3LCAT91",
-        "totalPrice": "6",
-        "salesTax": "0"
     }
 ]
