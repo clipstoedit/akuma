@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import axios from 'axios';
 import styles from '../../../styles/styles2.module.css'; // Import CSS styles
-import '@fortawesome/fontawesome-free/css/all.css'; // Import FontAwesome CSS
+import weekData from '../../../public/data/akuma/week.json';
+import monthData from '../../../public/data/akuma/month.json';
+import days90Data from '../../../public/data/akuma/90days.json';
+import lifetimeData from '../../../public/data/akuma/lifetime.json';
+import weekData2 from '../../../public/data/akuma2/week.json';
+import monthData2 from '../../../public/data/akuma2/month.json';
+import days90Data2 from '../../../public/data/akuma2/90days.json';
+import lifetimeData2 from '../../../public/data/akuma2/lifetime.json';
 
 const SellerPage = () => {
     const router = useRouter();
@@ -12,6 +18,49 @@ const SellerPage = () => {
     const [sortOrder, setSortOrder] = useState('desc');
     const [timeRangeOptions, setTimeRangeOptions] = useState([]); // Array to store time range options
     const [timeRange, setTimeRange] = useState('week'); // Default to week
+
+    // Extract the source query parameter from the URL
+    const source = router.query.source || 'akuma';
+
+    useEffect(() => {
+        // Simulate fetching time range options
+        setTimeRangeOptions([
+            { value: 'week', label: 'Week' },
+            { value: 'month', label: 'Month' },
+            { value: '90days', label: '90 Days' },
+            { value: 'lifetime', label: 'Lifetime' }
+        ]);
+    }, []);
+
+    useEffect(() => {
+        fetchData();
+    }, [timeRange, source]);
+
+    const fetchData = () => {
+        let dataToDisplay;
+        const selectedData = source === 'akuma2' ? [weekData2, monthData2, days90Data2, lifetimeData2] : [weekData, monthData, days90Data, lifetimeData];
+
+        switch (timeRange) {
+            case 'week':
+                dataToDisplay = selectedData[0].filter(sale => sale.Seller === sellerName);
+                break;
+            case 'month':
+                dataToDisplay = selectedData[1].filter(sale => sale.Seller === sellerName);
+                break;
+            case '90days':
+                dataToDisplay = selectedData[2].filter(sale => sale.Seller === sellerName);
+                break;
+            case 'lifetime':
+                dataToDisplay = selectedData[3].filter(sale => sale.Seller === sellerName);
+                break;
+            default:
+                dataToDisplay = selectedData[0].filter(sale => sale.Seller === sellerName);
+                break;
+        }
+
+        setSellerData(dataToDisplay);
+    };
+
 
     const handleGoBack = () => {
         router.back(); // This will navigate back to the previous page
@@ -39,27 +88,6 @@ const SellerPage = () => {
     };
 
     useEffect(() => {
-        // Fetch available time range options from server
-        const fetchTimeRangeOptions = async () => {
-            try {
-                const response = await axios.get('/api/timeRangeOptions');
-                setTimeRangeOptions(response.data); // Set time range options state
-            } catch (error) {
-                console.error('Error fetching time range options:', error);
-            }
-        };
-        fetchTimeRangeOptions(); // Fetch time range options when component mounts
-    }, []);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(`/api/sellerData?seller=${sellerName}&timeRange=${timeRange}`);
-                setSellerData(response.data);
-            } catch (error) {
-                console.error(`Error fetching data for ${sellerName}:`, error);
-            }
-        };
         if (sellerName) {
             fetchData();
         }
@@ -109,6 +137,7 @@ const SellerPage = () => {
                 <table className={styles.leaderboardTable}>
                     <thead>
                         <tr>
+                            <th>Guild</th>
                             <th>Seller</th>
                             <th onClick={() => handleSort('Buyer')}>
                                 Buyer
@@ -159,6 +188,7 @@ const SellerPage = () => {
                     <tbody>
                         {sortedData.map((sale, index) => (
                             <tr key={index}>
+                                <td>{sale["Guild Name"]}</td>
                                 <td>{sale["Seller"]}</td>
                                 <td>{sale["Buyer"]}</td>
                                 <td>
